@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import Lanyard from "./components/Lanyard/Lanyard";
 import RotatingText from "./components/RotatingText/RotatingText";
