@@ -1,6 +1,7 @@
-'use client';
+"use client";
+
 import Image from "next/image";
-import Lanyard from "./components/Lanyard/Lanyard";
+import dynamic from "next/dynamic";
 import RotatingText from "./components/RotatingText/RotatingText";
 import SplitText from "./components/SplitText/SplitText";
 import BlurText from "./components/BlurText/BlurText";
@@ -8,8 +9,16 @@ import AnimatedContent from "./components/AnimatedContent/AnimatedContent";
 import CountUp from "./components/CountUp/CountUp";
 import PixelBlast from "./components/PixelBlast/PixelBlast";
 import TargetCursor from "./components/TargetCursor/TargetCursor";
-import ScrollVelocity from "./components/ScrollVelocity/ScrollVelocity";
 
+const Lanyard = dynamic(
+  () => import("./components/Lanyard/Lanyard"),
+  { ssr: false }
+);
+
+const ScrollVelocity = dynamic(
+  () => import("./components/ScrollVelocity/ScrollVelocity"),
+  { ssr: false }
+);
 function Home() {
   const birthDate = new Date(2007, 11, 13);
   const today = new Date();
