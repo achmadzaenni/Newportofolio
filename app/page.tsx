@@ -7,8 +7,7 @@ import SplitText from "./components/SplitText/SplitText";
 import BlurText from "./components/BlurText/BlurText";
 import AnimatedContent from "./components/AnimatedContent/AnimatedContent";
 import CountUp from "./components/CountUp/CountUp";
-import PixelBlast from "./components/PixelBlast/PixelBlast";
-import TargetCursor from "./components/TargetCursor/TargetCursor";
+
 
 const Lanyard = dynamic(
   () => import("./components/Lanyard/Lanyard"),
@@ -19,6 +18,17 @@ const ScrollVelocity = dynamic(
   () => import("./components/ScrollVelocity/ScrollVelocity"),
   { ssr: false }
 );
+
+const TargetCursor = dynamic(
+  () => import("./components/TargetCursor/TargetCursor"),
+  { ssr: false }
+);
+
+const PixelBlast = dynamic(
+  () => import("./components/PixelBlast/PixelBlast"),
+  { ssr: false }
+);
+
 function Home() {
   const birthDate = new Date(2007, 11, 13);
   const today = new Date();
